@@ -23,8 +23,7 @@ const imageList = galleryItems.map(galleryItem => {
 
 ulEl.insertAdjacentHTML("beforeend", imageList);
 
-function openModalHandler(event) {
-event.preventDefault();
+
 const lightBox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt', 
  captionPosition: 'bottom', 

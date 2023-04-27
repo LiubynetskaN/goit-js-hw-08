@@ -13,8 +13,18 @@ populateTextarea();
 
 function onFormSubmit(evt){
 evt.preventDefault();
+
+const {email, message} = refs.form.elements;
+    if (!email.value || !message.value) {
+      return alert('Будь ласка, заповніть всі поля');
+    }
 evt.currentTarget.reset();
 
+    const formData = {
+        email: email.value,
+        message: message.value
+    }; 
+    console.log(formData);
 localStorage.removeItem(STORAGE_KEY);
 }
 
