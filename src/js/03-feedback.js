@@ -16,16 +16,19 @@ evt.preventDefault();
 
 const {email, message} = refs.form.elements;
     if (!email.value || !message.value) {
-      return alert('Будь ласка, заповніть всі поля');
+       alert('Будь ласка, заповніть всі поля');
+       return
     }
-evt.currentTarget.reset();
+    const data = localStorage.getItem(STORAGE_KEY)
+    console.log("data:" , data)
 
-    const formData = {
-        email: email.value,
-        message: message.value
-    }; 
-    console.log(formData);
-localStorage.removeItem(STORAGE_KEY);
+    evt.currentTarget.reset();
+    localStorage.removeItem(STORAGE_KEY);
+    // const formData = {
+    //     email: email.value,
+    //     message: message.value
+    // }; 
+    // console.log(formData);
 }
 
 function onTextareaInput(evt){

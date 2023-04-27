@@ -30,4 +30,3 @@ const lightBox = new SimpleLightbox('.gallery a', {
 captionDelay: 250,
 });
 lightBox.on('show.simpleLightbox', function () {})
-}
